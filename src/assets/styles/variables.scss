@@ -1,0 +1,37 @@
+// color
+$primary: #E5261E;
+$success: #26de81;
+$danger: #fc5c65;
+$warning: #fed330;
+$light: #999999;
+$purple: #8854d0;
+ 
+$bg-main: #FFF;
+$bg-alarm: rgba(#E5261E, 0.15);
+$text-primary: #333333;
+$text-placeholder: #828282;
+$text-light: $bg-main;
+$text-active: $primary;
+$secondary: #F2F2F2;
+ 
+// Font
+$main-font: 'Rubik', sans-serif;
+ 
+// Size
+$main-font-color: $text-primary;
+$main-font-size: 16px;
+$main-font-weight: 400;
+$main-line-height: 1.4;
+$font-size-biggest: 28px;
+$font-size-big: 24px;
+ 
+$width-desktop: 1200px;
+$width-desktop-sm: 1000px;
+$width-tablet: 768px;
+$width-tablet-sm: 640px;
+$width-phone: 480px;
+$width-phone-sm: 320px;
+
+$anim-speed: 0.3s;
+
+$opacity: 0.8;

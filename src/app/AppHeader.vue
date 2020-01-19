@@ -1,0 +1,96 @@
+<template>
+  <header class="header">
+    <div class="container">
+      <div class="grid">
+        <div class="column">
+          <div class="logo">
+            <a href="/">
+              <img src="/assets/img/logo.svg" alt="logo" />
+            </a>
+            <a href="/">Видеосервис</a>
+          </div>
+        </div>
+        <div class="column bigger search">
+          <input type="text" placeholder="Поиск..." />
+          <span class>Найти</span>
+        </div>
+        <div class="column auth">
+          <button class="btn">Войти</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="column">
+          <nav>
+            <ul class="menu">
+              <li>
+                <a href class="active">Фильмы</a>
+              </li>
+              <li>
+                <a href>Телеканалы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
+ 
+ 
+<script>
+export default {
+  name: "AppHeader"
+};
+</script>
+ 
+ 
+<style lang="scss">
+.header {
+  padding: 30px 0;
+  .logo {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      color: $text-primary;
+      img {
+        margin-right: 11px;
+      }
+    }
+  }
+  .search {
+    margin-top: 5px;
+    text-align: center;
+    input {
+      min-width: 320px;
+    }
+    span {
+      color: $primary;
+      margin: 0 30px;
+      cursor: pointer;
+      &:hover {
+        opacity: $opacity;
+      }
+    }
+  }
+  .auth {
+    text-align: right;
+  }
+
+  nav {
+    text-align: center;
+    margin: 40px 0;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      a{
+        font-weight: 500;
+        font-size: $font-size-biggest;
+      }
+    }
+  }
+}
+</style>

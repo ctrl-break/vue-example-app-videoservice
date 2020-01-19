@@ -1,0 +1,139 @@
+body {
+    color: $main-font-color;
+    font-family: $main-font;
+    display: flex;
+    margin: 0;
+}
+ 
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+@media (min-width: $width-phone) {
+    .container {
+        max-width: $width-phone - 20px;
+    }
+}
+ 
+@media (min-width: $width-tablet) {
+    .container {
+        max-width: $width-tablet - 20px;
+    }
+}
+ 
+@media (min-width: $width-desktop-sm) {
+    .container {
+        max-width: $width-desktop-sm;
+    }
+}
+ 
+@media (min-width: $width-desktop) {
+    .container {
+        max-width: $width-desktop;
+    }
+}
+ 
+
+// https://zeph.co/grid
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column {
+    box-sizing: border-box;
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.bigger {
+    flex: 2.5;
+}
+.halves .column {
+    flex: 0 0 50%;
+}
+.thirds .column {
+    flex: 0 0 33.3333%;
+}
+.fourths .column {
+    flex: 0 0 25%;
+}
+@media (max-width: $width-desktop-sm) {
+    .grid {
+        display: block;
+    }
+}
+
+/*  Common  */
+a{
+    color: $text-primary;
+    text-decoration: none;
+    &:hover{
+        opacity: $opacity;
+    }
+}
+
+a.active{
+    color: $primary;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $primary;
+}
+
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+
+
+/*      App     */
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.main_loader {
+    font-size: 2rem;
+    animation-fill-mode: forwards;
+    animation: fadeInDown 1s 1;
+    animation-name: fadeInDown;
+}
+
+.anim_appear{
+    animation-fill-mode: forwards;
+    animation: fadeIn $anim-speed 1;
+    animation-name: fadeIn;
+}
+
+/*  Forms   */
+
+input{
+    border: none;
+    background-color: $bg-main;
+    border-bottom: 1px solid $text-primary;
+    &::placeholder {
+        color: $text-placeholder;
+    }
+}
+
+.btn {
+    background-color: $primary;
+    color: $text-light;
+    border-radius: 4px;
+    line-height: 19px;
+    font-size: $main-font-size;
+    font-weight: 500;
+    border: none;
+    padding: 9px 32px;
+    cursor: pointer;
+    &:hover{
+        opacity: $opacity;
+    }
+}
