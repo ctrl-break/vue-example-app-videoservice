@@ -24,10 +24,10 @@
           <nav>
             <ul class="menu">
               <li>
-                <a href class="active">Фильмы</a>
+                <router-link to="/" exact>Фильмы</router-link>
               </li>
               <li>
-                <a href>Телеканалы</a>
+                <router-link to="/tv" exact>Телеканалы</router-link>
               </li>
             </ul>
           </nav>
@@ -89,6 +89,12 @@ export default {
       a{
         font-weight: 500;
         font-size: $font-size-biggest;
+        &.router-link-active{
+            color: $primary;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid $primary;
+        }
       }
     }
   }
