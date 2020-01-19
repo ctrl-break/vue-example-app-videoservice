@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper anim_appear">
         <AppHeader />
-        <main class="content"></main>
+        <AppContent />
         <AppFooter />
     </div>
 </template>
@@ -10,12 +10,14 @@
 <script>
 import AppHeader from './AppHeader.vue';
 import AppFooter from './AppFooter.vue';
+import AppContent from './AppContent.vue';
  
 export default {
     name: "App",
     components: {
         AppHeader,
-        AppFooter
+        AppFooter,
+        AppContent
     }
 };
 </script>

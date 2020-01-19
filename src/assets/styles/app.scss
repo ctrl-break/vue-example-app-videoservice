@@ -1,14 +1,9 @@
-body {
-    color: $main-font-color;
-    font-family: $main-font;
-    display: flex;
-    margin: 0;
-}
- 
 .container {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
  
 @media (min-width: $width-phone) {
@@ -40,6 +35,8 @@ body {
 .grid {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
 }
 .column {
     box-sizing: border-box;
@@ -65,7 +62,14 @@ body {
     }
 }
 
-/*  Common  */
+/*      Common      */
+body {
+    color: $main-font-color;
+    font-family: $main-font;
+    display: flex;
+    margin: 0;
+}
+ 
 a{
     color: $text-primary;
     text-decoration: none;
