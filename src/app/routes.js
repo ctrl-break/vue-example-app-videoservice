@@ -1,6 +1,6 @@
 import Tv from './components/Tv.vue';
 import Movies from './components/Movies.vue';
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 
 
 // 3. Create the router
@@ -10,4 +10,4 @@ export default new VueRouter({
     { path: '/', component: Movies },
     { path: '/tv', component: Tv },
   ]
-})
+});

@@ -4,10 +4,10 @@
       <div class="grid">
         <div class="column">
           <div class="logo">
-            <a href="/">
+            <router-link to="/" exact>
               <img src="/assets/img/logo.svg" alt="logo" />
-            </a>
-            <a href="/">Видеосервис</a>
+            </router-link>
+            <router-link to="/" exact>Видеосервис</router-link>
           </div>
         </div>
         <div class="column bigger search">
@@ -47,7 +47,7 @@ export default {
  
 <style lang="scss">
 .header {
-  padding: 30px 0;
+  padding: 30px 0 0;
   .logo {
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@ export default {
 
   nav {
     text-align: center;
-    margin: 40px 0;
+    margin: 40px 0 30px;
     li {
       display: inline-block;
       padding: 0 10px;

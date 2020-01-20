@@ -66,6 +66,7 @@
 body {
     color: $main-font-color;
     font-family: $main-font;
+    font-size: $font-size-basic;
     display: flex;
     margin: 0;
 }
@@ -125,7 +126,7 @@ input{
     color: $text-light;
     border-radius: 4px;
     line-height: 19px;
-    font-size: $main-font-size;
+    font-size: $font-size-basic;
     font-weight: 500;
     border: none;
     padding: 9px 32px;
