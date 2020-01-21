@@ -9,9 +9,16 @@ const movies = Movies;
 export default new Vuex.Store({
     state: {
         movies,
-        user: null
+        user: null,
+        showModal: false
     },
     mutations: {
+      toggleModal(state) {
+        state.showModal = !state.showModal;
+      },
+      closeModal(state) {
+        state.showModal = false;
+      }
     },
     getters: {
         allMovies(state) {
@@ -19,6 +26,9 @@ export default new Vuex.Store({
         },
         movieById(state, id) {
             return state.movies.find(item => item.id === id);
+        },
+        modalState(state) {
+          return state.showModal;
         }
       }
 })
