@@ -1,13 +1,16 @@
 <template>
     <div class="tv">
-        tv
+        {{tvSliceByCurrentTime}}
     </div>
 </template>
  
  
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  name: "Tv"
+  name: "Tv",
+  computed: mapGetters(["tvSliceByCurrentTime"]),
 };
 </script>
  
