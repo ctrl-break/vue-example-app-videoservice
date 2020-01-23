@@ -4,7 +4,7 @@
       <img :src="movie.picture" />
       <div class="description">{{movie.description}}</div>
     </div>
-    <div class="title">{{movie.title}}</div>
+    <div class="movie_title">{{movie.title}}</div>
   </li>
 </template>
  
@@ -46,7 +46,7 @@ export default {
       opacity: 1;
     }
   }
-  .title {
+  .movie_title {
     text-transform: capitalize;
   }
 }

@@ -1,11 +1,9 @@
 <template>
   <div class="slider_wrapper">
     <button class="left" @click="scrollLeft()">&laquo;</button>
-    <div class="scrollable" @wheel.prevent="mouseWheel($event)">
-      <ul class="slider">
-        <SliderItem v-for="movie of movies" v-bind:key="movie.id" v-bind:movie="movie" />
-      </ul>
-    </div>
+    <ul class="slider scrollable" @wheel.prevent="mouseWheel($event)">
+      <SliderItem v-for="movie of movies" v-bind:key="movie.id" v-bind:movie="movie" />
+    </ul>
     <button class="right" @click="scrollRight()">&raquo;</button>
   </div>
 </template>
@@ -84,24 +82,24 @@ export default {
 <style lang="scss" scoped>
 .slider_wrapper {
   position: relative;
+  margin-bottom: 40px;
   .scrollable {
     max-width: 100%;
     overflow: hidden;
     position: relative;
+  }
+  .slider {
+    white-space: nowrap;
 
-    .slider {
-      white-space: nowrap;
-
-      li {
-        display: inline-block;
-        margin: 0 10px;
-        min-width: 280px;
-        &:first-child {
-          margin-left: 0;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      min-width: 280px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

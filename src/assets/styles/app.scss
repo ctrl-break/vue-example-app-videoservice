@@ -5,31 +5,31 @@
     padding-left: 10px;
     padding-right: 10px;
 }
- 
+
 @media (min-width: $width-phone) {
     .container {
         max-width: $width-phone - 20px;
     }
 }
- 
+
 @media (min-width: $width-tablet) {
     .container {
         max-width: $width-tablet - 20px;
     }
 }
- 
+
 @media (min-width: $width-desktop-sm) {
     .container {
         max-width: $width-desktop-sm;
     }
 }
- 
+
 @media (min-width: $width-desktop) {
     .container {
         max-width: $width-desktop;
     }
 }
- 
+
 
 // https://zeph.co/grid
 .grid {
@@ -38,24 +38,30 @@
     margin-right: -10px;
     margin-left: -10px;
 }
+
 .column {
     box-sizing: border-box;
     flex: 1;
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .bigger {
     flex: 2.5;
 }
+
 .halves .column {
     flex: 0 0 50%;
 }
+
 .thirds .column {
     flex: 0 0 33.3333%;
 }
+
 .fourths .column {
     flex: 0 0 25%;
 }
+
 @media (max-width: $width-desktop-sm) {
     .grid {
         display: block;
@@ -70,25 +76,32 @@ body {
     display: flex;
     margin: 0;
 }
- 
-a{
+
+a {
     color: $text-primary;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         opacity: $opacity;
     }
 }
 
-.text-left{
+.text-left {
     text-align: left;
 }
-.text-right{
+
+.text-right {
     text-align: right;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
+.title {
+    font-size: $font-size-big;
+    padding-bottom: 20px;
+}
 
 /*      App     */
 #app {
@@ -97,6 +110,7 @@ a{
     align-items: center;
     width: 100%;
 }
+
 .main_loader {
     font-size: 2rem;
     animation-fill-mode: forwards;
@@ -104,7 +118,7 @@ a{
     animation-name: fadeInDown;
 }
 
-.anim_appear{
+.anim_appear {
     animation-fill-mode: forwards;
     animation: fadeIn $anim-speed 1;
     animation-name: fadeIn;
@@ -112,10 +126,11 @@ a{
 
 /*  Forms   */
 
-input{
+input {
     border: none;
     background-color: $bg-main;
     border-bottom: 1px solid $text-primary;
+
     &::placeholder {
         color: $text-placeholder;
     }
@@ -131,7 +146,25 @@ input{
     border: none;
     padding: 9px 32px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         opacity: $opacity;
     }
+}
+
+/*     gradients   */
+.orange {
+    background: linear-gradient(136.27deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+
+.pink {
+    background: linear-gradient(136.27deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+
+.blue {
+    background: linear-gradient(136.27deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+
+.dark {
+    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
 }

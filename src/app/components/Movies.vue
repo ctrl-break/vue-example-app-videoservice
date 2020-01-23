@@ -1,10 +1,8 @@
 <template>
   <div class="movies">
-    <div class="title">
-      <!-- Из макета  не удалось вырезать иконку, она объединена с текстом -->
-      <img src="/assets/img/icons/flame.svg" alt="shame">
-    </div>
-    <Slider v-bind:movies="allMovies" />
+    <div class="title">{{currentGenre}}</div>
+    <Slider v-bind:movies="filteredMovies" />
+    <Genre />
   </div>
 </template>
  
@@ -12,20 +10,14 @@
 <script>
 import { mapGetters } from "vuex";
 import Slider from "./Slider.vue";
+import Genre from "./Genre.vue";
 
 export default {
   name: "Movies",
-  computed: mapGetters(["allMovies"]),
+  computed: mapGetters(["filteredMovies", "currentGenre"]),
   components: {
-    Slider
+    Slider,
+    Genre
   }
 };
 </script>
- 
- 
-<style lang="scss" scoped>
-.title {
-  font-size: $font-size-big;
-  padding-bottom: 20px;
-}
-</style>
