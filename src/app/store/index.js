@@ -22,7 +22,7 @@ export default new Vuex.Store({
     genres,
     currentGenre: "Новинки",
     tv,
-    user: null,
+    user: localStorage.getItem('user'),
     showModal: false
   },
   mutations: {
@@ -37,8 +37,15 @@ export default new Vuex.Store({
       state.filteredMovies = state.movies.filter(
         movie => movie.genre === genre
       );
-      console.log(genre, state.filteredMovies);
-    }
+    },
+    setUser(state, userName) {
+      state.user = userName;
+      localStorage.setItem('user', userName);
+    },
+    userLogout(state) {
+      state.user = null;
+      localStorage.removeItem('user');
+    } 
   },
   getters: {
     allMovies(state) {
@@ -70,9 +77,12 @@ export default new Vuex.Store({
       return state.tv.map(item => {
         item.teleprogram = item.teleprogram
           .filter(tvprog => tvprog.time.substr(0, 2) >= currentTime)
-          .slice(0, 2);
+          .slice(0, 3);
         return item;
       });
+    },
+    user(state) {
+      return state.user;
     }
   }
 });

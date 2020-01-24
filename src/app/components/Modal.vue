@@ -1,26 +1,31 @@
 <template>
   <transition name="modal">
     <div class="modal-mask">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" @click="closeModal">
         <div class="modal-container">
-          <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
+          <div class="modal-header text-center">
+            <slot name="header">Вход</slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              default body
-            </slot>
-          </div>
-
-          <div class="modal-footer">
-            <slot name="footer">
-              default footer
-              <button class="modal-default-button" @click="$emit('close')">
-                OK
-              </button>
+              <form>
+                <div class="text-center">
+                  <input type="text" placeholder="Логин" v-model="login"/>
+                </div>
+                <div class="text-center">
+                  <input type="password" placeholder="Пароль" v-model="password"/>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" />
+                    Запомнить
+                  </label>
+                </div>
+                <div class="text-center">
+                  <button class="btn modal-default-button" @click="signIn">Войти</button>
+                </div>
+              </form>
             </slot>
           </div>
         </div>
@@ -30,8 +35,33 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+import { mapGetters } from "vuex";
+
 export default {
-  name: "Modal"
+  name: "Modal",
+  data() {
+    return {
+      login: "someuser",
+      password: 'somepassword'
+    };
+  },
+  computed: mapGetters(["user", "currentGenre"]),
+  methods: {
+    ...mapMutations(["setUser"]),
+    closeModal(event) {
+      console.log(event);
+      if (event.target.className === "modal-wrapper") {
+        this.$emit("close");
+      }
+    },
+    signIn(event) {
+      console.log("signIn", event);
+      event.preventDefault();
+      this.setUser(this.login);
+      this.$emit("close");
+    }
+  }
 };
 </script>
 
@@ -43,9 +73,9 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: table;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
@@ -58,22 +88,32 @@ export default {
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
 }
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
+.modal-header {
+  font-size: $font-size-biggest;
+  font-weight: 500;
 }
 
 .modal-body {
   margin: 20px 0;
+  form {
+    width: 232px;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+    }
+    & > div {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .modal-default-button {
-  float: right;
+  margin-top: 60px;
 }
 
 .modal-enter {

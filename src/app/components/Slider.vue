@@ -83,10 +83,16 @@ export default {
 .slider_wrapper {
   position: relative;
   margin-bottom: 40px;
+  overflow: hidden;
   .scrollable {
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .slider {
     white-space: nowrap;
