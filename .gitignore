@@ -19,6 +19,5 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
-package-lock.json
 
 # End of https://www.gitignore.io/api/vuejs,visualstudiocode

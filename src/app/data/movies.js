@@ -4,7 +4,7 @@
   '{{repeat(50)}}',
   {
     id: '{{index()}}',
-    picture: '{{random("https://picsum.photos/280/370", "https://www.fillmurray.com/280/370", "https://dummyimage.com/280x370", "http://placekitten.com/g/280/370", "https://placeimg.com/280/370/any")}}',
+    picture: '{{random("https://picsum.photos/280/370", "https://www.fillmurray.com/280/370", "https://dummyimage.com/280x370", "https://placekitten.com/g/280/370", "https://placeimg.com/280/370/any")}}',
     genre: '{{random("Комедии", "Ужасы", "Драма", "Фантастика")}}',
     title: '{{lorem(integer(1, 4), "words")}}',
 	description: '{{lorem(1, "paragraphs")}}',
@@ -23,7 +23,7 @@
 export default [
   {
     "id": 0,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Драмы",
     "title": "cillum tempor dolore",
     "description": "Labore cillum labore quis esse ipsum deserunt. Ea consectetur non officia enim Lorem dolore est tempor labore pariatur esse velit. Excepteur magna veniam Lorem reprehenderit tempor qui fugiat adipisicing officia aliquip.\r\n",
@@ -118,7 +118,7 @@ export default [
   },
   {
     "id": 3,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Фантастика",
     "title": "veniam",
     "description": "Incididunt anim cupidatat eiusmod quis ipsum fugiat exercitation velit sunt veniam incididunt minim eiusmod. Elit laborum labore duis excepteur ipsum exercitation consectetur. Mollit reprehenderit laboris incididunt et ut exercitation ea duis nostrud Lorem. Irure ullamco cupidatat incididunt in minim minim id labore reprehenderit proident qui. Labore sit aliquip ullamco ex anim eiusmod. Incididunt amet eu fugiat consequat laboris dolore laboris deserunt fugiat qui laboris et excepteur.\r\n",
@@ -293,7 +293,7 @@ export default [
   },
   {
     "id": 10,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Комедии",
     "title": "laborum incididunt minim",
     "description": "Culpa dolore mollit deserunt eu anim voluptate pariatur commodo magna nulla. Nulla adipisicing mollit officia ea tempor tempor. Minim laboris aliquip magna ipsum do enim ex elit ad cillum aliqua eu commodo.\r\n",
@@ -358,7 +358,7 @@ export default [
   },
   {
     "id": 13,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Комедии",
     "title": "ipsum minim dolore exercitation",
     "description": "Labore ex magna cillum deserunt do id irure ex est eu minim dolore laboris. Est consequat magna occaecat reprehenderit. Proident labore voluptate nostrud mollit dolor. Consectetur esse id qui do duis. Est reprehenderit laboris dolore consequat nisi excepteur sint nostrud. Velit qui et velit Lorem dolore officia labore occaecat sint et elit tempor aute.\r\n",
@@ -378,7 +378,7 @@ export default [
   },
   {
     "id": 14,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Драмы",
     "title": "cupidatat",
     "description": "Occaecat excepteur magna magna nulla exercitation ut culpa voluptate incididunt mollit. Consequat nostrud nulla quis consectetur proident consequat. Ad ut cupidatat ad velit non voluptate elit cillum dolore. Occaecat ad quis elit excepteur amet in adipisicing non cillum mollit officia aliquip enim aliquip. Velit est ut anim tempor sunt consectetur do. Enim sit ut magna commodo reprehenderit in pariatur eu eiusmod fugiat ad aliqua. Cillum eu reprehenderit eiusmod laborum quis commodo magna anim amet ad duis cillum est.\r\n",
@@ -558,7 +558,7 @@ export default [
   },
   {
     "id": 22,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Ужасы",
     "title": "id",
     "description": "Mollit officia sint tempor id exercitation pariatur cupidatat anim ipsum sit proident anim. Quis esse non dolor magna adipisicing cillum pariatur culpa enim voluptate voluptate cillum. Qui aliqua ut est ipsum id nulla dolor velit ex esse tempor.\r\n",
@@ -623,7 +623,7 @@ export default [
   },
   {
     "id": 24,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Фантастика",
     "title": "proident commodo in",
     "description": "Aliquip laboris incididunt proident veniam est fugiat ad fugiat sit fugiat mollit. Consectetur nulla dolore sunt minim occaecat excepteur dolore voluptate irure adipisicing. Ex dolore aliqua Lorem fugiat voluptate culpa ex ad eiusmod elit elit. Laboris cupidatat nulla dolore excepteur pariatur. Ea adipisicing adipisicing exercitation laborum elit elit aliquip Lorem pariatur id.\r\n",
@@ -743,7 +743,7 @@ export default [
   },
   {
     "id": 29,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Фантастика",
     "title": "ut et",
     "description": "Officia non veniam dolor duis consectetur occaecat non. Tempor tempor sit nisi enim labore ut deserunt consectetur consequat adipisicing ut sunt non et. Mollit occaecat nostrud reprehenderit sit est pariatur tempor tempor reprehenderit.\r\n",
@@ -793,7 +793,7 @@ export default [
   },
   {
     "id": 32,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Драмы",
     "title": "excepteur laboris duis",
     "description": "Pariatur duis Lorem est aliquip fugiat laboris laboris velit. Duis proident ea dolor aute eiusmod voluptate commodo labore do ea cillum. Aliquip id labore aute quis mollit nisi ex excepteur enim irure in proident id.\r\n",
@@ -1043,7 +1043,7 @@ export default [
   },
   {
     "id": 42,
-    "picture": "http://placekitten.com/g/280/370",
+    "picture": "https://placekitten.com/g/280/370",
     "genre": "Комедии",
     "title": "nulla",
     "description": "Aliquip non deserunt laborum id et. Deserunt commodo nostrud aliquip aute et et elit esse laborum nulla labore dolor sint. Quis id enim incididunt Lorem sunt nostrud laboris. Amet ea cillum sunt officia.\r\n",
