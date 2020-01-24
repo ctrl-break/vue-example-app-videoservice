@@ -45,6 +45,7 @@ export default {
 .auth {
   width: 100%;
   text-align: right;
+  margin-top: 5px;
   input{
     max-width: 120px;
   }

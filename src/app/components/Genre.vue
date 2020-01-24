@@ -1,6 +1,13 @@
 <template>
   <div>
-    <div class="title">Жанры</div>
+    <div class="title">
+      Жанры
+      <span
+        v-if="currentGenre !== 'Новинки'"
+        @click="resetFilter"
+        title="Сбросить фильтр"
+      >&times;</span>
+    </div>
     <div class="genres">
       <div
         class="genre grad"
@@ -25,18 +32,24 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "Genre",
-  computed: mapGetters(["genres"]),
+  computed: mapGetters(["genres", "currentGenre"]),
   methods: {
-    ...mapMutations(["filterMoviesByGenre"])
+    ...mapMutations(["filterMoviesByGenre", "resetFilter"])
   }
 };
 </script>
  
  
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .grad {
   box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
+}
+
+.title span {
+  font-size: $font-size-small;
+  cursor: pointer;
+  color: $primary;
 }
 
 .genres {

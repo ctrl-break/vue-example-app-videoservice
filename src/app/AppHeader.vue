@@ -10,9 +10,8 @@
             <router-link to="/" exact>Видеосервис</router-link>
           </div>
         </div>
-        <div class="column bigger search">
-          <input type="text" placeholder="Поиск..." />
-          <span class>Найти</span>
+        <div class="column bigger">
+          <SearchMovie />
         </div>
         <div class="column">
             <Auth />
@@ -26,6 +25,7 @@
  
  
 <script>
+import SearchMovie from './components/SearchMovie.vue';
 import Navigation from './components/Navigation.vue';
 import Auth from './components/Auth.vue';
 
@@ -33,7 +33,8 @@ export default {
   name: "AppHeader",
   components: {
     Navigation,
-    Auth
+    Auth,
+    SearchMovie
   }
 };
 </script>
@@ -52,21 +53,6 @@ export default {
       color: $text-primary;
       img {
         margin-right: 11px;
-      }
-    }
-  }
-  .search {
-    margin-top: 5px;
-    text-align: center;
-    input {
-      min-width: 320px;
-    }
-    span {
-      color: $primary;
-      margin: 0 30px;
-      cursor: pointer;
-      &:hover {
-        opacity: $opacity;
       }
     }
   }

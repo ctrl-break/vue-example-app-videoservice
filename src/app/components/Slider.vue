@@ -1,15 +1,24 @@
 <template>
   <div class="slider_wrapper">
-    <button class="left" @click="scrollLeft()">&laquo;</button>
-    <ul class="slider scrollable" @wheel.prevent="mouseWheel($event)">
-      <SliderItem v-for="movie of movies" v-bind:key="movie.id" v-bind:movie="movie" />
-    </ul>
-    <button class="right" @click="scrollRight()">&raquo;</button>
+    <template v-if="movies.length">
+      <button class="arrows left" @click="scrollLeft()">&laquo;</button>
+      <ul class="slider scrollable" @wheel.prevent="mouseWheel($event)">
+        <SliderItem v-for="movie of movies" v-bind:key="movie.id" v-bind:movie="movie" />
+      </ul>
+      <button class="arrows right" @click="scrollRight()">&raquo;</button>
+    </template>
+    <template v-else>
+      <div class="title text-center">Ничего не найдено</div>
+      <div class="text-center">
+        <button class="btn inverse small" @click="resetFilter">сбросить</button>
+      </div>
+    </template>
   </div>
 </template>
  
  
 <script>
+import { mapMutations } from "vuex";
 import SliderItem from "./SliderItem.vue";
 
 function sideScroll(element, direction, speed = 25, distance = 300, step = 50) {
@@ -49,7 +58,8 @@ export default {
       } else {
         sideScroll(el, "left");
       }
-    }
+    },
+    ...mapMutations(["resetFilter"])
   },
   mounted() {
     const el = this.$el.querySelector(".scrollable");
@@ -109,7 +119,7 @@ export default {
       }
     }
   }
-  button {
+  button.arrows {
     opacity: 0;
     position: absolute;
     z-index: 100;
