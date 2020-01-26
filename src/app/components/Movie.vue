@@ -1,6 +1,6 @@
 <template>
-  <div class="movie">
-    <div class="grid" v-if="movie">
+  <div class="movie" v-if="movie">
+    <div class="grid">
       <div class="column">
         <div class="poster">
           <router-link to="/" class="backlink">&lt;</router-link>
@@ -10,7 +10,9 @@
       <div class="column">
         <div class="info">
           <span class="label">Название:</span>
-          <span class="text"><strong>{{movie.title}}</strong></span>
+          <span class="text">
+            <strong>{{movie.title}}</strong>
+          </span>
         </div>
         <div class="info">
           <span class="label">Страна:</span>
@@ -20,17 +22,18 @@
           <span class="label">Жанр:</span>
           <span class="text">{{movie.genre}}</span>
         </div>
-        <div class="info">
-            {{movie.description}}
-        </div>
+        <div class="info">{{movie.description}}</div>
       </div>
     </div>
+
+    <Comments v-bind:comments="movie.comments" v-bind:movieId="movie.id"/>
   </div>
 </template>
  
  
 <script>
 import { mapGetters } from "vuex";
+import Comments from "./Comments.vue";
 
 export default {
   name: "Movie",
@@ -43,6 +46,9 @@ export default {
   },
   mounted() {
     this.movie = this.movieById(this.id);
+  },
+  components: {
+    Comments
   }
 };
 </script>
@@ -50,6 +56,9 @@ export default {
  
 <style lang="scss" scoped>
 .movie {
+  & > .grid {
+    margin-bottom: 40px;
+  }
   .poster {
     position: relative;
     img {
@@ -66,18 +75,18 @@ export default {
   }
 
   .info {
-      margin-bottom: 16px;
-      span{
-          display: inline-block;
+    margin-bottom: 16px;
+    span {
+      display: inline-block;
+    }
+    .label {
+      min-width: 150px;
+    }
+    .text {
+      &::first-letter {
+        text-transform: uppercase;
       }
-      .label{
-          min-width: 150px;
-      }
-      .text{
-          &::first-letter{
-              text-transform: uppercase;
-          }
-      }
+    }
   }
 }
 </style>

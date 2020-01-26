@@ -17,4 +17,4 @@ setTimeout( () => {
         store,
         render: h => h(App),
     }).$mount('#app');
-}, 1000);
+}, 1500);
