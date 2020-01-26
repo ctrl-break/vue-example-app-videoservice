@@ -13,5 +13,7 @@ export default {
  
  
 <style lang="scss">
-
+  .content{
+    margin-bottom: 40px;
+  }
 </style>

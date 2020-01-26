@@ -64,8 +64,8 @@ export default new Vuex.Store({
     filteredMovies(state) {
       return state.filteredMovies;
     },
-    movieById(state, id) {
-      return state.movies.find(item => item.id === id);
+    movieById: state => id =>  {
+      return state.movies.find(item => +item.id === +id);
     },
     modalState(state) {
       return state.showModal;

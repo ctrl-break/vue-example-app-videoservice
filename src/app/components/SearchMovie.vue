@@ -14,17 +14,20 @@ import { mapMutations } from "vuex";
 export default {
   name: "SearchMovie",
   data() {
-      return {
-          currentSearch: ''
-      }
+    return {
+      currentSearch: ""
+    };
   },
   methods: {
     ...mapMutations(["filterMoviesByTitle"]),
     searchMovie(event) {
       event.preventDefault();
+      if (!this.currentSearch) {
+        return;
+      }
       this.filterMoviesByTitle(this.currentSearch);
-      this.currentSearch = '';
-      this.$router.push('/');
+      this.currentSearch = "";
+      this.$router.push("/");
     }
   }
 };
