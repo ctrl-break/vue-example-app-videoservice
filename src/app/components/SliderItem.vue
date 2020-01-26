@@ -1,10 +1,12 @@
 <template>
   <li class="slider_item">
     <div class="poster anim_appear">
-      <img :src="movie.picture" />
-      <div class="description">{{movie.description}}</div>
+      <router-link :to="'/' + movie.id" exact>
+        <img :src="movie.picture" />
+        <div class="description">{{movie.description}}</div>
+      </router-link>
     </div>
-    <div class="movie_title">{{movie.title}}</div>
+    <router-link :to="'/' + movie.id" exact class="movie_title">{{movie.title}}</router-link>
   </li>
 </template>
  
