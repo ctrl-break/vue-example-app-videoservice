@@ -11,7 +11,7 @@ Vue + vuex
 ```  
 npm i  
 
-npm run dev  # разработка  
+npm run dev  # localhost:8080  
 npm run build  # сборка в /dist  
 ```  
 
