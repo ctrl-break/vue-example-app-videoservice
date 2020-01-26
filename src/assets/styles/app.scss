@@ -130,7 +130,7 @@ input {
     border: none;
     background-color: $bg-main;
     border-bottom: 1px solid $text-primary;
-
+    font-weight: 500;
     &::placeholder {
         color: $text-placeholder;
     }
@@ -154,12 +154,16 @@ input {
         color: $primary;
         margin: 0 30px;
         cursor: pointer;
+        &:hover {
+            opacity: $opacity;
+            background-color: transparent;
+        }
     }
     &.small{
         font-size: $font-size-small;
     }
-    &:hover {
-        opacity: $opacity;
+    &:hover{
+        background-color: darken($primary, 7%);
     }
 }
 

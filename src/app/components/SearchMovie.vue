@@ -24,6 +24,7 @@ export default {
       event.preventDefault();
       this.filterMoviesByTitle(this.currentSearch);
       this.currentSearch = '';
+      this.$router.push('/');
     }
   }
 };
