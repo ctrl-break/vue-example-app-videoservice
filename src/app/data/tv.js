@@ -1073,7 +1073,7 @@ export default [
       {
         id: 6,
         name: "officia aliqua nisi quis id",
-        time: "09:00"
+        time: "23:00"
       },
       {
         id: 7,
@@ -1083,7 +1083,7 @@ export default [
       {
         id: 8,
         name: "enim tempor sunt ipsum",
-        time: "08:24"
+        time: "23:24"
       },
       {
         id: 9,
@@ -1098,7 +1098,7 @@ export default [
       {
         id: 11,
         name: "incididunt esse irure quis minim",
-        time: "07:07"
+        time: "22:07"
       },
       {
         id: 12,
