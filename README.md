@@ -11,7 +11,7 @@ Vue + vuex
 ```  
 npm i  
 
-npm run dev  # разработка  
+npm run dev  # localhost:8080  
 npm run build  # сборка в /dist  
 ```  
 
@@ -19,8 +19,7 @@ npm run build  # сборка в /dist
 [https://vue-example-app-videoservice.netlify.com/](https://vue-example-app-videoservice.netlify.com/)
 
 ## Preview  
-![v-app](https://psv4.userapi.com/c856528/u3244178/docs/d16/c4baee014ccc/vapp.jpg)
-
+![v-app](https://raw.githubusercontent.com/ctrl-break/vue-example-app-videoservice/master/src/assets/img/vapp.jpg)
 
 ## Requirements  
 Требования по браузерам: Internet Explorer 11, Edge, Chrome, Opera, Yandex Browser, Firefox последних версий.  
