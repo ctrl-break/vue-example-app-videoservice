@@ -1,7 +1,12 @@
 <template>
-  <div class="tv">
-    <simplebar data-simplebar-auto-hide="false">
-      <div class="grid" v-for="tv of tvSliceByCurrentTime" v-bind:key="tv.id">
+  <div>
+    <simplebar class="tv" data-simplebar-auto-hide="true">
+      <div
+        class="grid"
+        v-for="(tv, index) of tvSliceByCurrentTime"
+        v-bind:key="tv.id"
+        :class="{ last: index === tvSliceByCurrentTime.length - 1 }"
+      >
         <div class="column tv_logo">
           <img :src="tv.logo" />
         </div>
@@ -43,10 +48,13 @@ export default {
   max-height: 696px;
   overflow-y: scroll;
   overflow-x: hidden;
-  & > .grid {
+  & .grid {
     background-color: $secondary;
     padding: 21px;
     margin-bottom: 21px;
+    &.last{
+      margin-bottom: 0;
+    }
     .tv_title {
       margin-bottom: 16px;
       &::first-letter {

@@ -187,3 +187,10 @@ input {
 .dark {
     background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
 }
+
+
+.simplebar-scrollbar::before{
+    right: 0;
+    background: #BDBDBD;
+    border-radius: 10px;
+}
