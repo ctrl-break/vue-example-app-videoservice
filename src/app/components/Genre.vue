@@ -60,7 +60,7 @@ export default {
     cursor: pointer;
     color: $text-light;
     opacity: 0.8;
-    width: 280px;
+    min-width: 280px;
     height: 208px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -84,6 +84,34 @@ export default {
       .genre_name {
         font-size: $font-size-big;
         padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-desktop) {
+  .genres {
+    .genre {
+      flex: 1 0 45%;
+      margin: 0 0 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:nth-child(2n-1){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-tablet) {
+  .genres {
+    .genre {
+      &:nth-child(2n-1){
+        margin-right: 0;
       }
     }
   }

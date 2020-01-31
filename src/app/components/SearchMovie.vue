@@ -47,4 +47,23 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: $width-desktop-sm) {
+  .search {
+    input {
+      min-width: 320px;
+    }
+  }
+}
+
+@media screen and (max-width: $width-tablet) {
+  .search {
+    input {
+      min-width: 100%;
+    }
+    button{
+      margin-top: 20px;
+    }
+  }
+}
 </style>

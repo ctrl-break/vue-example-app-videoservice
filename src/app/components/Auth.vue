@@ -1,13 +1,18 @@
 <template>
   <div class="auth">
     <span class="signin">
-      <input type="text" @change="changeName" :value="user" v-if="showUserForm" />
-      <span v-if="!showUserForm" @click="showForm">{{user}}</span>
+      <input
+        class="user_name"
+        type="text"
+        @change="changeName"
+        :value="user"
+        v-if="showUserForm && user"
+      />
+      <span class="user_name" v-if="!showUserForm && user" @click="showForm">{{user}}</span>
 
       <button class="btn" @click="toggleModal" v-if="!user">Войти</button>
       <span class="logout" @click="userLogout" v-if="user">Выйти</span>
     </span>
-    
   </div>
 </template>
  
@@ -46,14 +51,28 @@ export default {
   width: 100%;
   text-align: right;
   margin-top: 5px;
-  input{
+  input {
     max-width: 120px;
   }
 }
 
-.logout{
+.logout {
   color: $primary;
   margin-left: 16px;
   cursor: pointer;
+}
+
+@media screen and (max-width: $width-tablet-sm) {
+  .auth {
+    .user_name {
+      display: block;
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .logout {
+    margin-left: 5px;
+  }
 }
 </style>

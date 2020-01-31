@@ -7,13 +7,13 @@
             <router-link to="/" exact>
               <img src="/assets/img/logo.svg" alt="logo" />
             </router-link>
-            <router-link to="/" exact>Видеосервис</router-link>
+            <router-link to="/" exact class="site_name">Видеосервис</router-link>
           </div>
         </div>
-        <div class="column bigger">
+        <div class="column bigger search_wrapper">
           <SearchMovie />
         </div>
-        <div class="column">
+        <div class="column auth_wrapper">
             <Auth />
         </div>
       </div>
@@ -40,7 +40,7 @@ export default {
 </script>
  
  
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
   padding: 30px 0 0;
   .logo {
@@ -55,6 +55,40 @@ export default {
         margin-right: 11px;
       }
     }
+  }
+}
+
+@media screen and (max-width: $width-desktop-sm){
+  .grid{
+    position: relative;
+    .auth_wrapper{
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+    .search_wrapper{
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $width-phone){
+  .grid{
+    position: relative;
+    .auth_wrapper{
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+    .search_wrapper{
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $width-phone-sm){
+  .site_name{
+    display: none;
   }
 }
 </style>

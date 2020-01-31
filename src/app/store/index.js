@@ -81,7 +81,7 @@ export default new Vuex.Store({
       return state.filteredMovies;
     },
     movieById: state => id =>  {
-      return state.movies.find(item => +item.id === +id);
+      return state.movies.filter(item => +item.id === +id)[0]; //ie11
     },
     modalState(state) {
       return state.showModal;

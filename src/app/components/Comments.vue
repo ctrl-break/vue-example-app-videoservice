@@ -24,6 +24,11 @@
         <div class="comment">
           <div class="strong">{{comment.author}}</div>
           <div>{{comment.text}}</div>
+          <span
+            class="mobile__delete"
+            v-if="comment.author === user"
+            @click="deleteComment(comment.id)"
+          >&times;</span>
         </div>
       </div>
       <div class="column action">
@@ -108,6 +113,12 @@ export default {
     padding: 16px;
     margin-bottom: 16px;
     width: 100%;
+    .mobile__delete {
+      display: none;
+      font-size: $font-size-biggest;
+      color: $primary;
+      cursor: pointer;
+    }
   }
   .action {
     .delete {
@@ -124,6 +135,34 @@ export default {
     padding: 16px;
     &.error {
       background-color: $bg-alarm;
+    }
+  }
+}
+
+@media screen and (max-width: $width-desktop-sm) {
+  textarea {
+    margin-bottom: 10px;
+  }
+  .comments {
+    .comment {
+      margin-bottom: 10px;
+      position: relative;
+      .mobile__delete {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        font-size: $font-size-big;
+      }
+    }
+    .action {
+      text-align: center;
+      button {
+        margin-bottom: 20px;
+      }
+      .delete {
+        display: none;
+      }
     }
   }
 }

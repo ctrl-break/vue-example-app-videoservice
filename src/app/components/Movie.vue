@@ -89,4 +89,10 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: $width-desktop-sm){
+  .poster{
+    margin-bottom: 30px;
+  }
+}
 </style>

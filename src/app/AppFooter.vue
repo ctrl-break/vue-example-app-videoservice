@@ -5,7 +5,7 @@
         <div class="logo">
           <img src="/assets/img/htc.svg" alt="logo" title="logo" />
         </div>
-        
+
         <div class="info">
           <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
           <p>+7 (3412) 93-88-61, 43-29-29</p>
@@ -26,7 +26,7 @@ export default {
 </script>
  
  
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
   padding: 22px 20px 25px;
   background-color: $secondary;
@@ -41,6 +41,24 @@ export default {
       a {
         color: #1f4766;
         font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-tablet) {
+  .footer {
+    padding: 20px;
+    background-color: $secondary;
+    .flex_wrapper {
+      display: block;
+      text-align: center;
+      .logo {
+        padding-right: 0;
+        img {
+          margin: 0 auto;
+          max-width: 25px;
+        }
       }
     }
   }
