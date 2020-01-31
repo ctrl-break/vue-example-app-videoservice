@@ -46,6 +46,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "core-js": "^3.6.4",
     "es6-promise": "^4.2.8",
     "simplebar-vue": "^1.4.0",
     "vue": "^2.6.11",
