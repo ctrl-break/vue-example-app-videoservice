@@ -3,6 +3,7 @@ import './assets/styles/app.scss';
 import 'simplebar/dist/simplebar.min.css';
 import 'es6-promise/auto';
 import 'core-js/features/array/find-index';
+import 'core-js/features/array/find';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
