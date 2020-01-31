@@ -5,7 +5,7 @@
   {
     id: '{{index()}}',
     title: '{{lorem(integer(1, 2), "words")}}',
-    logo: 'http://placehold.it/200x80',
+    logo: 'https://placehold.it/200x80',
     teleprogram: [
       '{{repeat(24)}}',
       {
@@ -22,7 +22,7 @@ export default [
   {
     id: 0,
     title: "id",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -149,7 +149,7 @@ export default [
   {
     id: 1,
     title: "ex",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -276,7 +276,7 @@ export default [
   {
     id: 2,
     title: "nostrud",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -403,7 +403,7 @@ export default [
   {
     id: 3,
     title: "irure officia",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -530,7 +530,7 @@ export default [
   {
     id: 4,
     title: "ad",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -657,7 +657,7 @@ export default [
   {
     id: 5,
     title: "reprehenderit aute",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -784,7 +784,7 @@ export default [
   {
     id: 6,
     title: "aliqua est",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -911,7 +911,7 @@ export default [
   {
     id: 7,
     title: "sint",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -1038,7 +1038,7 @@ export default [
   {
     id: 8,
     title: "reprehenderit",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,
@@ -1165,7 +1165,7 @@ export default [
   {
     id: 9,
     title: "dolore nostrud",
-    logo: "http://placehold.it/200x80",
+    logo: "https://placehold.it/200x80",
     teleprogram: [
       {
         id: 0,

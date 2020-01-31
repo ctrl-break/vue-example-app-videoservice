@@ -62,6 +62,9 @@ export default {
     ...mapMutations(["resetFilter"])
   },
   mounted() {
+    if (!this.movies.length) {
+      return;
+    }
     const el = this.$el.querySelector(".scrollable");
     el.onscroll = ev => {
       const rightPos = ev.target.scrollWidth - ev.target.offsetWidth;
